@@ -1,0 +1,272 @@
+{
+  "tutorial": [
+    {
+      "id": "t1",
+      "title": "First Flight",
+      "description": "Move your drone right three times to reach the target.",
+      "objective": "Reach the green target tile",
+      "hint": "Use move_right() three times in a row.",
+      "sampleSolution": "move_right()\nmove_right()\nmove_right()",
+      "gridWidth": 6,
+      "gridHeight": 4,
+      "tiles": [
+        ["soil", "soil", "soil", "target", "soil", "soil"],
+        ["soil", "soil", "soil", "soil", "soil", "soil"],
+        ["soil", "soil", "soil", "soil", "soil", "soil"],
+        ["soil", "soil", "soil", "soil", "soil", "soil"]
+      ],
+      "droneStart": { "x": 0, "y": 1 },
+      "targetPosition": { "x": 3, "y": 1 },
+      "scoreTarget": 80,
+      "maxSteps": 20
+    },
+    {
+      "id": "t2",
+      "title": "Up and Down",
+      "description": "Learn to move in all four directions.",
+      "objective": "Navigate to the target using move_up, move_down, move_left, move_right",
+      "hint": "Try: move_right() twice, then move_up(), then move_right().",
+      "sampleSolution": "move_right()\nmove_right()\nmove_up()\nmove_right()\nmove_right()",
+      "gridWidth": 6,
+      "gridHeight": 5,
+      "tiles": [
+        ["soil", "soil", "soil", "soil", "soil", "target"],
+        ["soil", "soil", "soil", "soil", "soil", "soil"],
+        ["soil", "soil", "soil", "soil", "soil", "soil"],
+        ["soil", "soil", "soil", "soil", "soil", "soil"],
+        ["soil", "soil", "soil", "soil", "soil", "soil"]
+      ],
+      "droneStart": { "x": 0, "y": 2 },
+      "targetPosition": { "x": 5, "y": 0 },
+      "scoreTarget": 75,
+      "maxSteps": 25
+    },
+    {
+      "id": "t3",
+      "title": "Loop the Loop",
+      "description": "Use a for loop to move right 5 times.",
+      "objective": "Use for i in range(5): with move_right() inside",
+      "hint": "for i in range(5):\n    move_right()",
+      "sampleSolution": "for i in range(5):\n    move_right()",
+      "gridWidth": 8,
+      "gridHeight": 4,
+      "tiles": [
+        ["soil", "soil", "soil", "soil", "soil", "soil", "soil", "target"],
+        ["soil", "soil", "soil", "soil", "soil", "soil", "soil", "soil"],
+        ["soil", "soil", "soil", "soil", "soil", "soil", "soil", "soil"],
+        ["soil", "soil", "soil", "soil", "soil", "soil", "soil", "soil"]
+      ],
+      "droneStart": { "x": 0, "y": 1 },
+      "targetPosition": { "x": 7, "y": 1 },
+      "scoreTarget": 85,
+      "maxSteps": 15
+    },
+    {
+      "id": "t4",
+      "title": "Scan the Field",
+      "description": "Use scan() to inspect tiles. Scan the crop at (3,2).",
+      "objective": "Move to (3,2) and run scan()",
+      "hint": "Move to the tile, then call scan().",
+      "sampleSolution": "move_right()\nmove_right()\nmove_right()\nmove_down()\nscan()",
+      "gridWidth": 6,
+      "gridHeight": 5,
+      "tiles": [
+        ["soil", "soil", "soil", "soil", "soil", "soil"],
+        ["soil", "soil", "soil", "soil", "soil", "soil"],
+        ["soil", "soil", "crop", "soil", "soil", "soil"],
+        ["soil", "soil", "soil", "soil", "soil", "soil"],
+        ["soil", "soil", "soil", "soil", "soil", "soil"]
+      ],
+      "droneStart": { "x": 0, "y": 2 },
+      "targetPosition": { "x": 3, "y": 2 },
+      "scoreTarget": 80,
+      "maxSteps": 20
+    },
+    {
+      "id": "t5",
+      "title": "Water the Crops",
+      "description": "Dry crops need water. Move to dry tiles and water them.",
+      "objective": "Water the dry crop at (2,1)",
+      "hint": "if crop_is_dry:\n    water()",
+      "sampleSolution": "move_right()\nmove_right()\nmove_up()\nwater()",
+      "gridWidth": 6,
+      "gridHeight": 4,
+      "tiles": [
+        ["soil", "soil", "crop_dry", "soil", "soil", "soil"],
+        ["soil", "soil", "soil", "soil", "soil", "soil"],
+        ["soil", "soil", "soil", "soil", "soil", "soil"],
+        ["soil", "soil", "soil", "soil", "soil", "soil"]
+      ],
+      "droneStart": { "x": 0, "y": 1 },
+      "targetPosition": { "x": 2, "y": 0 },
+      "scoreTarget": 80,
+      "maxSteps": 25
+    },
+    {
+      "id": "t6",
+      "title": "Spray the Weeds",
+      "description": "Weeds harm crops. Use spray() on weed tiles.",
+      "objective": "Spray the weed at (4,2)",
+      "hint": "if weed_detected:\n    spray()",
+      "sampleSolution": "for i in range(4):\nmove_right()\nmove_down()\nmove_down()\nspray()",
+      "gridWidth": 6,
+      "gridHeight": 5,
+      "tiles": [
+        ["soil", "soil", "soil", "soil", "soil", "soil"],
+        ["soil", "soil", "soil", "soil", "soil", "soil"],
+        ["soil", "soil", "soil", "soil", "weed", "soil"],
+        ["soil", "soil", "soil", "soil", "soil", "soil"],
+        ["soil", "soil", "soil", "soil", "soil", "soil"]
+      ],
+      "droneStart": { "x": 0, "y": 2 },
+      "targetPosition": { "x": 4, "y": 2 },
+      "scoreTarget": 80,
+      "maxSteps": 25
+    },
+    {
+      "id": "t7",
+      "title": "Collect Samples",
+      "description": "Collect plant samples for analysis.",
+      "objective": "Use collect_sample() on the sample tile",
+      "hint": "Move to the sample tile, then collect_sample().",
+      "sampleSolution": "move_right()\nmove_right()\nmove_right()\ncollect_sample()",
+      "gridWidth": 6,
+      "gridHeight": 4,
+      "tiles": [
+        ["soil", "soil", "soil", "soil", "soil", "soil"],
+        ["soil", "soil", "soil", "sample", "soil", "soil"],
+        ["soil", "soil", "soil", "soil", "soil", "soil"],
+        ["soil", "soil", "soil", "soil", "soil", "soil"]
+      ],
+      "droneStart": { "x": 0, "y": 1 },
+      "targetPosition": { "x": 3, "y": 1 },
+      "scoreTarget": 85,
+      "maxSteps": 20
+    },
+    {
+      "id": "t8",
+      "title": "Recharge Station",
+      "description": "Battery runs low. Find the recharge station.",
+      "objective": "Reach the recharge tile and call recharge()",
+      "hint": "while battery > 20:\n    move_right()\nrecharge()",
+      "sampleSolution": "for i in range(5):\n    move_right()\nrecharge()",
+      "gridWidth": 8,
+      "gridHeight": 4,
+      "tiles": [
+        ["soil", "soil", "soil", "soil", "soil", "soil", "soil", "recharge"],
+        ["soil", "soil", "soil", "soil", "soil", "soil", "soil", "soil"],
+        ["soil", "soil", "soil", "soil", "soil", "soil", "soil", "soil"],
+        ["soil", "soil", "soil", "soil", "soil", "soil", "soil", "soil"]
+      ],
+      "droneStart": { "x": 0, "y": 1 },
+      "targetPosition": { "x": 7, "y": 0 },
+      "scoreTarget": 80,
+      "maxSteps": 30
+    },
+    {
+      "id": "t9",
+      "title": "Conditional Logic",
+      "description": "Use if crop_is_dry to water only when needed.",
+      "objective": "Water the dry crop, skip the healthy one",
+      "hint": "if crop_is_dry:\n    water()\nmove_right()",
+      "sampleSolution": "move_up()\nmove_right()\nif crop_is_dry:\n    water()\nmove_right()\nmove_right()",
+      "gridWidth": 6,
+      "gridHeight": 4,
+      "tiles": [
+        ["soil", "crop_dry", "soil", "crop", "soil", "target"],
+        ["soil", "soil", "soil", "soil", "soil", "soil"],
+        ["soil", "soil", "soil", "soil", "soil", "soil"],
+        ["soil", "soil", "soil", "soil", "soil", "soil"]
+      ],
+      "droneStart": { "x": 0, "y": 1 },
+      "targetPosition": { "x": 5, "y": 0 },
+      "scoreTarget": 85,
+      "maxSteps": 25
+    },
+    {
+      "id": "t10",
+      "title": "Full Patrol",
+      "description": "Combine everything: scan, water, and spray in one patrol.",
+      "objective": "Complete a row patrol: scan, water dry, spray weeds",
+      "hint": "for i in range(6):\n    if crop_is_dry:\n        water()\n    if weed_detected:\n        spray()\n    move_right()",
+      "sampleSolution": "for i in range(6):\n    scan()\n    if crop_is_dry:\n        water()\n    if weed_detected:\n        spray()\n    move_right()",
+      "gridWidth": 8,
+      "gridHeight": 4,
+      "tiles": [
+        ["soil", "crop_dry", "soil", "weed", "soil", "crop", "soil", "target"],
+        ["soil", "soil", "soil", "soil", "soil", "soil", "soil", "soil"],
+        ["soil", "soil", "soil", "soil", "soil", "soil", "soil", "soil"],
+        ["soil", "soil", "soil", "soil", "soil", "soil", "soil", "soil"]
+      ],
+      "droneStart": { "x": 0, "y": 0 },
+      "targetPosition": { "x": 7, "y": 0 },
+      "scoreTarget": 90,
+      "maxSteps": 50
+    }
+  ],
+  "advanced": [
+    {
+      "id": "a1",
+      "title": "Path Optimizer",
+      "description": "Find the shortest path to water 3 dry crops.",
+      "objective": "Water all dry crops with minimal moves",
+      "hint": "Plan your route. Avoid backtracking.",
+      "sampleSolution": "move_right()\nwater()\nmove_right()\nwater()\nmove_down()\nmove_right()\nwater()",
+      "gridWidth": 6,
+      "gridHeight": 5,
+      "tiles": [
+        ["soil", "crop_dry", "soil", "crop_dry", "soil", "soil"],
+        ["soil", "soil", "soil", "soil", "soil", "soil"],
+        ["soil", "soil", "soil", "crop_dry", "soil", "soil"],
+        ["soil", "soil", "soil", "soil", "soil", "soil"],
+        ["soil", "soil", "soil", "soil", "soil", "soil"]
+      ],
+      "droneStart": { "x": 0, "y": 0 },
+      "targetPosition": null,
+      "scoreTarget": 95,
+      "maxSteps": 30
+    },
+    {
+      "id": "a2",
+      "title": "Battery Marathon",
+      "description": "Visit recharge, then collect 2 samples. Manage battery!",
+      "objective": "Recharge when low, collect both samples",
+      "hint": "while battery > 15:\n    ...\nrecharge() when needed",
+      "sampleSolution": "move_right()\nmove_right()\nrecharge()\nmove_right()\nmove_right()\ncollect_sample()\nmove_down()\nmove_down()\ncollect_sample()",
+      "gridWidth": 6,
+      "gridHeight": 5,
+      "tiles": [
+        ["soil", "soil", "recharge", "soil", "sample", "soil"],
+        ["soil", "soil", "soil", "soil", "soil", "soil"],
+        ["soil", "soil", "soil", "soil", "soil", "soil"],
+        ["soil", "soil", "soil", "soil", "soil", "soil"],
+        ["soil", "soil", "soil", "soil", "sample", "soil"]
+      ],
+      "droneStart": { "x": 0, "y": 0 },
+      "targetPosition": null,
+      "scoreTarget": 90,
+      "maxSteps": 40
+    },
+    {
+      "id": "a3",
+      "title": "Obstacle Course",
+      "description": "Navigate around obstacles to reach the target.",
+      "objective": "Avoid obstacles, reach target efficiently",
+      "hint": "Plan a path around the obstacles.",
+      "sampleSolution": "move_right()\nmove_right()\nmove_up()\nmove_right()\nmove_right()\nmove_right()\nmove_down()\nmove_right()",
+      "gridWidth": 8,
+      "gridHeight": 5,
+      "tiles": [
+        ["soil", "soil", "soil", "obstacle", "soil", "soil", "soil", "target"],
+        ["soil", "soil", "soil", "obstacle", "soil", "soil", "soil", "soil"],
+        ["soil", "soil", "soil", "obstacle", "soil", "soil", "soil", "soil"],
+        ["soil", "soil", "soil", "soil", "soil", "soil", "soil", "soil"],
+        ["soil", "soil", "soil", "soil", "soil", "soil", "soil", "soil"]
+      ],
+      "droneStart": { "x": 0, "y": 2 },
+      "targetPosition": { "x": 7, "y": 0 },
+      "scoreTarget": 95,
+      "maxSteps": 25
+    }
+  ]
+}
