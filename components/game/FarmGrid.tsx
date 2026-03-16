@@ -82,15 +82,13 @@ function TileCell({
         animatedStyle,
       ]}
     >
-      {isDrone && (
-        <View style={styles.drone} />
-      )}
-      {tile.state === 'dry' && tile.type === 'crop' && (
+      {isDrone ? <View style={styles.drone} /> : null}
+      {tile.state === 'dry' && tile.type === 'crop' ? (
         <View style={[styles.overlay, { backgroundColor: 'rgba(245,158,11,0.4)' }]} />
-      )}
-      {isWatered && <View style={[styles.overlay, { backgroundColor: 'rgba(14,165,233,0.3)' }]} />
-      {isSprayed && <View style={[styles.overlay, { backgroundColor: 'rgba(239,68,68,0.3)' }]} />
-      {isScanned && <View style={[styles.overlay, { backgroundColor: 'rgba(34,197,94,0.2)' }]} />
+      ) : null}
+      {isWatered ? <View style={[styles.overlay, { backgroundColor: 'rgba(14,165,233,0.3)' }]} /> : null}
+      {isSprayed ? <View style={[styles.overlay, { backgroundColor: 'rgba(239,68,68,0.3)' }]} /> : null}
+      {isScanned ? <View style={[styles.overlay, { backgroundColor: 'rgba(34,197,94,0.2)' }]} /> : null}
     </Animated.View>
   );
 }

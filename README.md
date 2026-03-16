@@ -87,6 +87,27 @@ DroneFarm/
 npm test
 ```
 
+## iOS Build & App Store
+
+See **[BUILD_IOS.md](./BUILD_IOS.md)** for step-by-step instructions:
+
+- Build for simulator (no Apple account)
+- Build for device / TestFlight
+- Build for App Store
+- Submit to App Store Connect
+
+## Push to GitHub
+
+To push DroneFarm to [github.com/harshitha-8/Game](https://github.com/harshitha-8/Game):
+
+```bash
+# Replace existing Game repo content (use with caution):
+git push -u origin main --force
+
+# Or push to a new branch to keep both:
+git push -u origin main:dronefarm
+```
+
 ## License
 
 MIT
